@@ -8,24 +8,38 @@ import sys # will allow us to handle the application's termination and exit stat
 from PyQt5.QtWidgets import * # Import QApplication and all the required widgets
 
 
-# Instance of QApplication to use
-app = QApplication([])
+class Window(QDialog):
 
-# Our application's GUI
-window = QWidget()
-window.setWindowTitle("Variable Width Font Calculator")
-window.setGeometry(100, 100, 280, 80) # window.x, window.y, window.width, window.height
+	def __init__(self):
+
+		super().__init__(parent=None)
+
+		self.setWindowTitle("Variable Width Font Calculator")
+			
+		helloMsg = QLabel("<h1>Hello, World!</h1>") # Display Game's screen Resolution and Font Game's Resolution
+
+		dialogLayout = QVBoxLayout()
+
+		formLayout = QFormLayout()
+			
+		formLayout.addRow(helloMsg)
+
+		formLayout.addRow("Input:", QLineEdit())
+
+		formLayout.addRow("Display:", QLineEdit())
+
+		dialogLayout.addLayout(formLayout)
+
+		self.setLayout(dialogLayout)
 
 
-# helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window) # Display Game's screen Resolution and Font Game's Resolution
-helloMsg = QLineEdit("Insert dialogue", parent=window) # Input Text window
+if __name__ == "__main__":
 
-
-# helloMsg.move(60, 15)
-
-
-# Show application's GUI in screen
-window.show()
-
-# Run application's event loop
-sys.exit(app.exec())
+	# Instance of QApplication to use
+	app = QApplication([])
+	# Our application's GUI
+	window = Window()
+	# Show application's GUI in screen
+	window.show()
+	# Run application's event loop
+	sys.exit(app.exec())
