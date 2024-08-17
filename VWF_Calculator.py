@@ -8,29 +8,38 @@ import sys # will allow us to handle the application's termination and exit stat
 from PyQt5.QtWidgets import * # Import QApplication and all the required widgets
 
 
+# Displayed Window
 class Window(QDialog):
 
 	def __init__(self):
-
-		super().__init__(parent=None)
-
+		super().__init__()
+		
 		self.setWindowTitle("Variable Width Font Calculator")
-			
-		helloMsg = QLabel("<h1>Hello, World!</h1>") # Display Game's screen Resolution and Font Game's Resolution
-
-		dialogLayout = QVBoxLayout()
-
-		formLayout = QFormLayout()
-			
-		formLayout.addRow(helloMsg)
-
-		formLayout.addRow("Input:", QLineEdit())
-
-		formLayout.addRow("Display:", QLineEdit())
-
-		dialogLayout.addLayout(formLayout)
-
-		self.setLayout(dialogLayout)
+		self.setGeometry(100, 100, 400, 200)  # (x, y, width, height)
+		
+		layout = QVBoxLayout()
+		
+		# Create a QLineEdit widget
+		self.label = QLabel("<h1>Hello, World!</h1>") # Display Game's screen Resolution and Font Game's Resolution
+		layout.addWidget(self.label)			
+		
+		# Create a QLineEdit widget
+		self.line_edit = QLineEdit(self)
+		layout.addWidget(self.line_edit)
+		
+		# Create a QLabel widget
+		self.label = QLabel("Text Entered: ", self)
+		layout.addWidget(self.label)
+		
+		# Connect the textChanged signal to the update_label slot
+		self.line_edit.textChanged.connect(self.update_label)
+		
+		self.setLayout(layout)
+		
+	# Slot function to update the label text
+	def update_label(self):
+		text = self.line_edit.text()
+		self.label.setText("Text Entered: " + text)
 
 
 if __name__ == "__main__":
