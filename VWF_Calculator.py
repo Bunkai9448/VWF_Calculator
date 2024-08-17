@@ -20,7 +20,7 @@ class Window(QDialog):
 		layout = QVBoxLayout()
 		
 		# Create a QLineEdit widget
-		self.label = QLabel("<h1>Hello, World!</h1>") # Display Game's screen Resolution and Font Game's Resolution
+		self.label = QLabel("ScreenSize: " + str(ScreenResolution) + "  ||  TileSize: " + str(TileSize) ) # Display Game's screen Resolution and Font Game's Resolution
 		layout.addWidget(self.label)			
 		
 		# Create a QLineEdit widget
@@ -28,7 +28,7 @@ class Window(QDialog):
 		layout.addWidget(self.line_edit)
 		
 		# Create a QLabel widget
-		self.label = QLabel("Text Entered: ", self)
+		self.label = QLabel("Display: ", self)
 		layout.addWidget(self.label)
 		
 		# Connect the textChanged signal to the update_label slot
@@ -39,10 +39,13 @@ class Window(QDialog):
 	# Slot function to update the label text
 	def update_label(self):
 		text = self.line_edit.text()
-		self.label.setText("Text Entered: " + text)
+		self.label.setText("Display: " + text)
 
 
 if __name__ == "__main__":
+
+	ScreenResolution = 18
+	TileSize = 8
 
 	# Instance of QApplication to use
 	app = QApplication([])
