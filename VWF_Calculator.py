@@ -1,6 +1,6 @@
-# file: VWF_Calculator.py
+# File: VWF_Calculator.py
 # Python version used: 3.7.3
-# author : Bunkai
+# Author : Bunkai
 # Version: 0.01
 # Date:  2024
 
@@ -14,7 +14,7 @@ app = QApplication([])
 # Our application's GUI
 window = QWidget()
 window.setWindowTitle("Variable Width Font Calculator")
-window.setGeometry(100, 100, 280, 80)
+window.setGeometry(100, 100, 280, 80) # window.x, window.y, window.width, window.height
 helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
 helloMsg.move(60, 15)
 
