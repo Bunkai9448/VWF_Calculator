@@ -15,8 +15,13 @@ app = QApplication([])
 window = QWidget()
 window.setWindowTitle("Variable Width Font Calculator")
 window.setGeometry(100, 100, 280, 80) # window.x, window.y, window.width, window.height
-helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
-helloMsg.move(60, 15)
+
+
+# helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window) # Display Game's screen Resolution and Font Game's Resolution
+helloMsg = QLineEdit("Insert dialogue", parent=window) # Input Text window
+
+
+# helloMsg.move(60, 15)
 
 
 # Show application's GUI in screen
