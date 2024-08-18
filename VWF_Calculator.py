@@ -43,7 +43,9 @@ class Window(QWidget):
 	def update_label(self,Dialogue):
 		text = self.line_edit.text()
 		self.label.setText(text)
+		self.label.setContentsMargins(70, -200, 0, 0)# .setContentsMargins(self, left: int, top: int, right: int, bottom: int)
 		self.label.setStyleSheet("background-image : url(Background); font: TileSize px;")
+
 		
 if __name__ == "__main__":
 
