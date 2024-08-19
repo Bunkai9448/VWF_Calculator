@@ -10,4 +10,4 @@ Usually, the first though to see how a text looks in a game window, is about ins
 - Calculator https://calculator.academy/text-size-calculator/
 
 ## Included Files with different licenses.
-- LeagueGothic-Regular-VariableFont_wdthFont, licensed under the CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/deed.en
+- EuropeanTeletext, licensed under the CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/deed.en
