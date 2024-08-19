@@ -14,13 +14,14 @@ class Window(QWidget):
 	def __init__(self):
 		super(Window, self).__init__()
 		
-		self.setWindowTitle("Variable Width Font Calculator")
-		self.setGeometry(100, 100, ScreenWidth, ScreenHeight)  # (x, y, width, height)
+		self.setWindowTitle("VWF size Calculator")
+		self.setGeometry(100, 100, ScreenWidth, ScreenHeight+10)  # (x, y, width, height)
 		
 		layout = QVBoxLayout(self)
 
 		# Create a QLineEdit widget
 		self.label = QLabel("ScreenSize: " + str(ScreenWidth) + "x" + str(ScreenHeight) + "  ||  TileSize: " + str(TileSize) ) # Display Game's screen Resolution and Font Game's Resolution
+		self.label.setAlignment(Qt.AlignCenter)
 		self.label.setFixedHeight(10)
 		layout.addWidget(self.label)	
 		
@@ -43,8 +44,10 @@ class Window(QWidget):
 	def update_label(self,Dialogue):
 		text = self.line_edit.text()
 		self.label.setText(text)
-		self.label.setContentsMargins(70, -200, 0, 0)# .setContentsMargins(self, left: int, top: int, right: int, bottom: int)
-		self.label.setStyleSheet("background-image : url(Background); font: TileSize px;")
+		self.label.resize(ScreenWidth, ScreenHeight)
+		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px; font: TileSize px;")
+		#self.label.setStyleSheet("background-image : url(Background); padding-left : 80px;  padding-top : 80px; font: TileSize px;")
+		
 
 		
 if __name__ == "__main__":
