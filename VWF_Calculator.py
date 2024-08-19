@@ -9,8 +9,11 @@ from PyQt5.QtWidgets import * # Import QApplication and all the required widgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
-
 class Window(QWidget):
+	# Load User Font
+	app = QApplication(sys.argv)
+	QFontDatabase.addApplicationFont("EuropeanTeletext.ttf")
+
 	def __init__(self):
 		super(Window, self).__init__()
 		
@@ -45,7 +48,7 @@ class Window(QWidget):
 		text = self.line_edit.text()
 		self.label.setText(text)
 		self.label.resize(ScreenWidth, ScreenHeight)
-		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px; font: TileSize px;")
+		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px; font-size: TileSize px; font-family: European Teletext ;")
 		#self.label.setStyleSheet("background-image : url(Background); padding-left : 80px;  padding-top : 80px; font: TileSize px;")
 		
 

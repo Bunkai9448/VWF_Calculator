@@ -8,3 +8,6 @@ Usually, the first though to see how a text looks in a game window, is about ins
 ## List of References and Documentation (in no particular order)
 - PyQt https://realpython.com/python-pyqt-gui-calculator/ , https://github.com/pyqt/examples , and https://doc.qt.io/qtforpython-6/overviews/stylesheet-examples.html
 - Calculator https://calculator.academy/text-size-calculator/
+
+## Included Files with different licenses.
+- LeagueGothic-Regular-VariableFont_wdthFont, licensed under the CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/deed.en
