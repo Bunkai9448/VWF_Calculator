@@ -9,6 +9,12 @@ from PyQt5.QtWidgets import * # Import QApplication and all the required widgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
+# Read the input and parse any control code into the action it should do instead of display the code itself
+def parseControlCodes(text):
+	text += "\n" + text # test
+	return text
+
+# Main tool
 class Window(QWidget):
 	# Load User Font
 	app = QApplication(sys.argv)
@@ -44,8 +50,9 @@ class Window(QWidget):
 		
 		
 	# Slot function to update the label text
-	def update_label(self,Dialogue):
+	def update_label(self):
 		text = self.line_edit.text()
+		text = parseControlCodes(text)
 		self.label.setText(text)
 		self.label.resize(ScreenWidth, ScreenHeight)
 		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px; font-size: TileSize px; font-family: European Teletext ;")
