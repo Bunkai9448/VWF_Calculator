@@ -9,7 +9,7 @@ Usually, the first though to see how a text looks in a game window, is about ins
 
 Background.png: This is the image that the tool will display, the purple rectangle in the sample.
 
-EuropeanTeletext.ttf: This is a mono-space font (Fixed width Font) that to tool will use for display by default. You can put any other Font to see different options, put a non mono-space font for a VWF display.
+EuropeanTeletext.ttf: This is a mono-space font (Fixed width Font) the tool will use it for display by default. You can put any other Font to see different options, put a non mono-space font for a VWF display.
 
 LICENSE: selfexplanatory, right?
 
