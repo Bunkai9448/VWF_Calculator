@@ -11,8 +11,18 @@ from PyQt5.QtGui import *
 
 # Read the input and parse any control code into the action it should do instead of display the code itself
 def parseControlCodes(text):
-	text += "\n" + text # test
-	return text
+	array = ""
+	maxLineSize=7 # maximum number of characters per line if any
+	currentLineSize = 0	# current number of characters in the printing line
+	
+	for i in text: # Traverse the text array, character by character
+		if currentLineSize == maxLineSize: # check if the line has reached its limit if any
+			array += "\n"  			# insert a breakline into the displayed text			
+			currentLineSize = 0		# a new line starts with zero characters
+		array += i			 # add current character to the display array
+		currentLineSize += 1 # update the number of characters in the current line
+
+	return array
 
 # Main tool
 class Window(QWidget):
