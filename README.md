@@ -31,3 +31,7 @@ TO-DO
 
 ## Included Files with different licenses.
 - EuropeanTeletext, licensed under the CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/deed.en
+
+## Credits and original source
+
+This tool was developed by Bunkai, if you want to report an issue, you can find the source at: https://github.com/Bunkai9448/VWF_Calculator
