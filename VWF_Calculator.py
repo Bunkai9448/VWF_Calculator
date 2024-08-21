@@ -15,14 +15,25 @@ def parseControlCodes(text):
 	maxLineSize=7 # maximum number of characters per line if any ; ZERO for no limit
 	currentLineSize = 0	# current number of characters in the printing line
 	ctrlCode = "<NL>"
-	
-	for i in text: # Traverse the text array, character by character
+
+	i = 0 # variable to iterate through the string
+	while i < len(text) : # traverse the text array, character by character
 	
 		if maxLineSize != 0 and currentLineSize == maxLineSize: # check if the line has reached its limit if any
 			array += "\n"  			# insert a breakline into the displayed text			
 			currentLineSize = 0		# a new line starts with zero characters
-		array += i			 # add current character to the display array
+		
+		# look for control code inputs		
+		if i+4 < len(text) and text[i] == '<' and text[i+1] == 'N' and text[i+2] == 'L' and text[i+3] == '>': 
+			array += "\n"  			# insert the display for the control code
+			currentLineSize = 0		# a new line starts with zero characters
+			i += 4 # update the current position of the i to avoid re-reading (and printing) the control code characters
+			continue			
+		
+		# add the current character and go to next iteration
+		array += text[i]			 # add current character to the display array
 		currentLineSize += 1 # update the number of characters in the current line
+		i += 1 # update current position of the iterator in the array
 
 	return array
 
