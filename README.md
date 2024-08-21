@@ -4,6 +4,21 @@ Variable Width Font Calculator aka Text Size Calculator
 ## Why do you need this tool?
 Usually, the first though to see how a text looks in a game window, is about inserting said text. However, what if you could do the same without doing the inserting every time? Well, look no more, this is the tool you want.
 
+
+## Files in this folder, with a description of each.
+
+Background.png: This is the image that the tool will display, the purple rectangle in the sample.
+
+EuropeanTeletext.ttf: This is a mono-space font (Fixed width Font) that to tool will use for display by default. You can put any other Font to see different options, put a non mono-space font for a VWF display.
+
+LICENSE: selfexplanatory, right?
+
+README.md: This is the file you are reading now.
+
+Sample.png: This is an example image of the tool running.
+
+VWF_Calculator.py: This is the script (tool) thst you will run to launch the tool.
+
 ## How to use
 TO-DO
 .![Display Sample](https://github.com/Bunkai9448/VWF_Calculator/blob/main/Sample.png)
