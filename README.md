@@ -17,7 +17,7 @@ README.md: This is the file you are reading now.
 
 Sample.png: This is an example image of the tool running.
 
-VWF_Calculator.py: This is the script (tool) thst you will run to launch the tool.
+VWF_Calculator.py: This is the script that you will run to launch the tool.
 
 ## How to use
 TO-DO
