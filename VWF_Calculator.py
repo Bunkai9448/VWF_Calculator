@@ -24,7 +24,7 @@ class Window(QWidget):
 		super(Window, self).__init__()
 		
 		self.setWindowTitle("VWF size Calculator")
-		self.setGeometry(100, 100, ScreenWidth, ScreenHeight+10)  # (x, y, width, height)
+		self.setGeometry(100, 100, ScreenWidth+22, ScreenHeight+65)  # (x, y, width, height)
 		
 		layout = QVBoxLayout(self)
 
@@ -51,20 +51,23 @@ class Window(QWidget):
 		
 	# Slot function to update the label text
 	def update_label(self):
-		text = self.line_edit.text()
-		text = parseControlCodes(text)
-		self.label.setText(text)
-		self.label.resize(ScreenWidth, ScreenHeight)
-		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px; font-size: TileSize px; font-family: European Teletext ;")
+		text = self.line_edit.text()	# Take the text from the User input
+		text = parseControlCodes(text)	# Parse the text with control codes and line size staff
+		self.label.setText(text)		# Set the received text as input for the display
+		self.label.setFixedWidth(ScreenWidth)	# Set Game's Window Width
+		self.label.setFixedHeight(ScreenHeight)	# Set Game's Window Height
+		self.label.setFont(QFont('European Teletext', TileSize))	# Set Font and Font Size
+		# Add The Game's Screenshot as background, Set Text Coordinates and other Font config. Like Font color
+		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px;")
 		#self.label.setStyleSheet("background-image : url(Background); padding-left : 80px;  padding-top : 80px; font: TileSize px;")
 		
 
 		
 if __name__ == "__main__":
 
-	ScreenWidth = 280
-	ScreenHeight = 280
-	TileSize = 8
+	ScreenWidth = 256
+	ScreenHeight = 224
+	TileSize = 10
 	Background = 'Background.png'
 	
 	# Instance of QApplication to use
