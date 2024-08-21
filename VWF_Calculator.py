@@ -80,10 +80,9 @@ class Window(QWidget):
 		self.label.setFixedWidth(ScreenWidth)	# Set Game's Window Width
 		self.label.setFixedHeight(ScreenHeight)	# Set Game's Window Height
 		self.label.setFont(QFont('European Teletext', TileSize))	# Set Font and Font Size
-		# Add The Game's Screenshot as background, Set Text Coordinates and other Font config. Like Font color
-		self.label.setStyleSheet("background-image : url(Background); padding-left : 60px;  padding-bottom : 80px;")
-		#self.label.setStyleSheet("background-image : url(Background); padding-left : 80px;  padding-top : 80px; font: TileSize px;")
-		
+		self.label.setContentsMargins(60, 60, 0, 120) # setContentsMargins(int left, int top, int right, int bottom)
+		# Set other config. Font-Color, etc
+		self.label.setStyleSheet("background-image : url(Background); color: black ;")
 
 		
 if __name__ == "__main__":
