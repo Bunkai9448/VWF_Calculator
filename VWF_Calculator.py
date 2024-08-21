@@ -52,7 +52,7 @@ class Window(QWidget):
 	# Slot function to update the label text
 	def update_label(self):
 		text = self.line_edit.text()	# Take the text from the User input
-		text = parseControlCodes(text)	# Parse the text with control codes and line size staff
+		text = parseControlCodes(text)	# Parse the text with control codes and line size stuff
 		self.label.setText(text)		# Set the received text as input for the display
 		self.label.setFixedWidth(ScreenWidth)	# Set Game's Window Width
 		self.label.setFixedHeight(ScreenHeight)	# Set Game's Window Height
