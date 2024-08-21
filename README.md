@@ -6,6 +6,7 @@ Usually, the first though to see how a text looks in a game window, is about ins
 
 ## How to use
 TO-DO
+.![Display Sample](https://github.com/Bunkai9448/VWF_Calculator/blob/main/Sample.png)
 
 - For a Fixed Widht use Mono Space Font, for VWF use any other Font.
 
