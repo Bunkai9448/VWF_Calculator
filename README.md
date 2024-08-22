@@ -32,7 +32,7 @@ VWF_Calculator.py file (with a text editor), before launching (running) it, you 
 - TileSize: Self-explatory name, right?
 - Background: This is the name of the image file that will be displayed for the game, you don't really need to change it. [For ease of use, just replace the image file instead]
 -	maxLineSize: is the maximum number of characters you want to have per line, set to ZERO (0) if you want no limit.
-- ctrlCode = `"<NL>"` : this is an example of control code that is in used to create a line break. Currently this variable is unused, and only for explaining purposes.
+- ctrlCode = `"<NL>"` : this is an example of control code that is in use to create a line break. Currently this variable is unused, and only for explaining purposes.
 - If you go to the `update_label` function around line 76, You can edit how the text will show: Font color, size, the margins for the text in the image... 
 - For a Fixed Widht use Mono Space Font, for VWF use any other Font.
 
