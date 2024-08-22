@@ -34,7 +34,7 @@ VWF_Calculator.py file (with a text editor), before launching (running) it, you 
 -	maxLineSize: is the maximum number of characters you want to have per line, set to ZERO (0) if you want no limit.
 - ctrlCode = `"<NL>"` : this is an example of control code that is in use to create a line break. Currently this variable is unused, and only for explaining purposes.
 - If you go to the `update_label` function around line 76, You can edit how the text will show: Font color, size, the margins for the text in the image... 
-- For a Fixed Widht use Mono Space Font, for VWF use any other Font.
+- For a Fixed width use Mono Space Font, for VWF use any other Font.
 
 ## List of References and Documentation (in no particular order)
 - PyQt https://realpython.com/python-pyqt-gui-calculator/ , https://github.com/pyqt/examples , https://doc.qt.io/qtforpython-6/overviews/stylesheet-examples.html , https://stackoverflow.com/questions/27955654/how-to-use-non-standard-custom-font-with-stylesheets
