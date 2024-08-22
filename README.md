@@ -20,9 +20,20 @@ Sample.png: This is an example image of the tool running.
 VWF_Calculator.py: This is the script that you will run to launch the tool.
 
 ## How to use
-TO-DO
 .![Display Sample](https://github.com/Bunkai9448/VWF_Calculator/blob/main/Sample.png)
 
+First off all, you should now that to run this tool, you need python 3.7 and pyqt 5 installed in your system. Without them, it won't work.
+
+With that out of the way, if you open your 
+VWF_Calculator.py file (with a text editor), before launching/running it, you can edit some settings for the tool's display. The full code is commented to the line, but here you can see the key values you want to have in mind.
+
+- ScreenWidth: is your game's width
+- ScreenHeight: is your game's height
+- TileSize: Self-explatory name, right?
+- Background: This is the name of the image file that will be displayed for the game, you don't really need to change it. [For ease of use, just replace the image file instead]
+-	maxLineSize: is the maximum number of characters you want to have per line, set to ZERO (0) if you want no limit.
+- ctrlCode = "<NL>" : this is an example of control code that is in used to create a line break. Currently this variable is unused, and only for explaining purposes.
+- If you go to the `update_label` function around line 76, You can edit how the text will show: Font color, size, the margins for the text in the image... 
 - For a Fixed Widht use Mono Space Font, for VWF use any other Font.
 
 ## List of References and Documentation (in no particular order)
