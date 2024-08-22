@@ -35,6 +35,7 @@ VWF_Calculator.py file (with a text editor), before launching (running) it, you 
 - ctrlCode = `"<NL>"` : this is an example of control code that is in use to create a line break. Currently this variable is unused, and only for explaining purposes.
 - If you go to the `update_label` function around line 76, You can edit how the text will show: Font color, size, the margins for the text in the image... 
 - For a Fixed width use Mono Space Font, for VWF use any other Font.
+- To make the margins fit in display for more than one line, use the bottom-margin for the maximum number of lines it could display and add lines with <NL> if you don't write enough text to fill them. It's not the perfect solution, but will give you a good display until that is properly fixed.
 
 ## List of References and Documentation (in no particular order)
 - PyQt https://realpython.com/python-pyqt-gui-calculator/ , https://github.com/pyqt/examples , https://doc.qt.io/qtforpython-6/overviews/stylesheet-examples.html , https://stackoverflow.com/questions/27955654/how-to-use-non-standard-custom-font-with-stylesheets
