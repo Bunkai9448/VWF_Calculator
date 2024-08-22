@@ -25,7 +25,7 @@ VWF_Calculator.py: This is the script that you will run to launch the tool.
 First off all, you should now that to run this tool, you need python 3.7 and pyqt 5 installed in your system. Without them, it won't work.
 
 With that out of the way, if you open your 
-VWF_Calculator.py file (with a text editor), before launching/running it, you can edit some settings for the tool's display. The full code is commented to the line, but here you can see the key values you want to have in mind.
+VWF_Calculator.py file (with a text editor), before launching (running) it, you can edit some settings for the tool's display. The full code is commented to the line, but here you can see the key values you want to have in mind.
 
 - ScreenWidth: is your game's width
 - ScreenHeight: is your game's height
