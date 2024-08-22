@@ -12,7 +12,6 @@ from PyQt5.QtGui import *
 # Read the input and parse any control code into the action it should do instead of display the code itself
 def parseControlCodes(text):
 	array = ""
-	maxLineSize=7 # maximum number of characters per line if any ; ZERO for no limit
 	currentLineSize = 0	# current number of characters in the printing line
 	ctrlCode = "<NL>"
 
@@ -55,6 +54,7 @@ class Window(QWidget):
 		self.label = QLabel("ScreenSize: " + str(ScreenWidth) + "x" + str(ScreenHeight) + "  ||  TileSize: " + str(TileSize) ) # Display Game's screen Resolution and Font Game's Resolution
 		self.label.setAlignment(Qt.AlignCenter)
 		self.label.setFixedHeight(10)
+		self.label.setStyleSheet("font-weight: bold")
 		layout.addWidget(self.label)	
 		
 		
@@ -80,9 +80,9 @@ class Window(QWidget):
 		self.label.setFixedWidth(ScreenWidth)	# Set Game's Window Width
 		self.label.setFixedHeight(ScreenHeight)	# Set Game's Window Height
 		self.label.setFont(QFont('European Teletext', TileSize))	# Set Font and Font Size
-		self.label.setContentsMargins(60, 60, 0, 120) # setContentsMargins(int left, int top, int right, int bottom)
+		self.label.setContentsMargins(64, 62, 0, 120) # setContentsMargins(int left, int top, int right, int bottom)
 		# Set other config. Font-Color, etc
-		self.label.setStyleSheet("background-image : url(Background); color: black ;")
+		self.label.setStyleSheet("background-image : url(Background); color: red ;")
 
 		
 if __name__ == "__main__":
@@ -90,6 +90,7 @@ if __name__ == "__main__":
 	ScreenWidth = 256
 	ScreenHeight = 224
 	TileSize = 10
+	maxLineSize=7 # maximum number of characters per line if any ; ZERO for no limit
 	Background = 'Background.png'
 	
 	# Instance of QApplication to use
