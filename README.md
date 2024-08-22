@@ -20,7 +20,7 @@ Sample.png: This is an example image of the tool running.
 VWF_Calculator.py: This is the script that you will run to launch the tool.
 
 ## How to use
-.![Display Sample](https://github.com/Bunkai9448/VWF_Calculator/blob/main/Sample.png)
+![Display Sample](https://github.com/Bunkai9448/VWF_Calculator/blob/main/Sample.png)
 
 First off all, you should now that to run this tool, you need python 3.7 and pyqt 5 installed in your system. Without them, it won't work.
 
