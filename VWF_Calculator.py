@@ -23,7 +23,7 @@ def parseControlCodes(text):
 			currentLineSize = 0		# a new line starts with zero characters
 		
 		# look for control code inputs		
-		if i+4 < len(text) and text[i] == '<' and text[i+1] == 'N' and text[i+2] == 'L' and text[i+3] == '>': 
+		if i+3 < len(text) and text[i] == '<' and text[i+1] == 'N' and text[i+2] == 'L' and text[i+3] == '>': 
 			array += "\n"  			# insert the display for the control code
 			currentLineSize = 0		# a new line starts with zero characters
 			i += 4 # update the current position of the i to avoid re-reading (and printing) the control code characters
