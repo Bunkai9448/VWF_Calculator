@@ -40,6 +40,7 @@ VWF_Calculator.py file (with a text editor), before launching (running) it, you 
 ## List of References and Documentation (in no particular order)
 - PyQt https://realpython.com/python-pyqt-gui-calculator/ , https://github.com/pyqt/examples , https://doc.qt.io/qtforpython-6/overviews/stylesheet-examples.html , https://stackoverflow.com/questions/27955654/how-to-use-non-standard-custom-font-with-stylesheets
 - Calculator https://calculator.academy/text-size-calculator/
+- Font Creator for pc and tool (not affiliated) https://sourceforge.net/projects/fontforge.mirror/
 
 ## Included Files with different licenses.
 - EuropeanTeletext, licensed under the CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/deed.en
